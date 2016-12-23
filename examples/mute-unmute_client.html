@@ -1,0 +1,49 @@
+<script>
+    function input_mute() {
+
+        var xhr = new XMLHttpRequest();
+        xhr.open("POST", "http://127.0.0.1:25639", true);
+        xhr.onreadystatechange = function() {
+            return true;
+        }
+        xhr.send("clientupdate client_input_muted=1" + "\n");
+
+    }
+
+    function input_unmute() {
+
+        var xhr = new XMLHttpRequest();
+        xhr.open("POST", "http://127.0.0.1:25639", true);
+        xhr.onreadystatechange = function() {
+            return true;
+        }
+        xhr.send("clientupdate client_input_muted=0" + "\n");
+
+    }
+    function output_mute() {
+
+        var xhr = new XMLHttpRequest();
+        xhr.open("POST", "http://127.0.0.1:25639", true);
+        xhr.onreadystatechange = function() {
+            return true;
+        }
+        xhr.send("clientupdate client_output_muted=1" + "\n");
+
+    }
+    function output_unmute() {
+
+        var xhr = new XMLHttpRequest();
+        xhr.open("POST", "http://127.0.0.1:25639", true);
+        xhr.onreadystatechange = function() {
+            return true;
+        }
+        xhr.send("clientupdate client_output_muted=0" + "\n");
+
+    }
+</script>
+
+<button type="button" onclick="input_mute()">mute input</button>
+<button type="button" onclick="input_unmute()">unmute input</button>
+<br />
+<button type="button" onclick="output_mute()">mute output</button>
+<button type="button" onclick="output_unmute()">unmute output</button>
