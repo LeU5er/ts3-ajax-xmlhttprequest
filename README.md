@@ -1,1 +1,1 @@
-# TS3 AJAX XMLHttpRequest
+# TeamSpeak 3 AJAX XMLHttpRequest
