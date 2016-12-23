@@ -1,1 +1,1 @@
-# ts3-ajax-xmlhttprequest
+# TS3 AJAX XMLHttpRequest
