@@ -40,6 +40,26 @@
         xhr.send("clientupdate client_output_muted=0" + "\n");
 
     }
+    function away() {
+
+        var xhr = new XMLHttpRequest();
+        xhr.open("POST", "http://127.0.0.1:25639", true);
+        xhr.onreadystatechange = function() {
+            return true;
+        }
+        xhr.send("clientupdate client_away=1" + "\n");
+
+    }
+    function not_away() {
+
+        var xhr = new XMLHttpRequest();
+        xhr.open("POST", "http://127.0.0.1:25639", true);
+        xhr.onreadystatechange = function() {
+            return true;
+        }
+        xhr.send("clientupdate client_away=0" + "\n");
+
+    }
 </script>
 
 <button type="button" onclick="input_mute()">mute input</button>
@@ -47,3 +67,6 @@
 <br />
 <button type="button" onclick="output_mute()">mute output</button>
 <button type="button" onclick="output_unmute()">unmute output</button>
+<br />
+<button type="button" onclick="away()">away</button>
+<button type="button" onclick="not_away()">not away</button>
