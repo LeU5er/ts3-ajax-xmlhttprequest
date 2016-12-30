@@ -1,0 +1,73 @@
+<script>
+    function input_mute() {
+
+        var xhr = new XMLHttpRequest();
+        xhr.open("POST", "http://127.0.0.1:25639", true);
+        xhr.onreadystatechange = function() {
+            return true;
+        }
+        xhr.send("clientupdate client_input_muted=1" + "\n");
+
+    }
+
+    function input_unmute() {
+
+        var xhr = new XMLHttpRequest();
+        xhr.open("POST", "http://127.0.0.1:25639", true);
+        xhr.onreadystatechange = function() {
+            return true;
+        }
+        xhr.send("clientupdate client_input_muted=0" + "\n");
+
+    }
+    function output_mute() {
+
+        var xhr = new XMLHttpRequest();
+        xhr.open("POST", "http://127.0.0.1:25639", true);
+        xhr.onreadystatechange = function() {
+            return true;
+        }
+        xhr.send("clientupdate client_output_muted=1" + "\n");
+
+    }
+    function output_unmute() {
+
+        var xhr = new XMLHttpRequest();
+        xhr.open("POST", "http://127.0.0.1:25639", true);
+        xhr.onreadystatechange = function() {
+            return true;
+        }
+        xhr.send("clientupdate client_output_muted=0" + "\n");
+
+    }
+    function away() {
+
+        var xhr = new XMLHttpRequest();
+        xhr.open("POST", "http://127.0.0.1:25639", true);
+        xhr.onreadystatechange = function() {
+            return true;
+        }
+        xhr.send("clientupdate client_away=1" + "\n");
+
+    }
+    function not_away() {
+
+        var xhr = new XMLHttpRequest();
+        xhr.open("POST", "http://127.0.0.1:25639", true);
+        xhr.onreadystatechange = function() {
+            return true;
+        }
+        xhr.send("clientupdate client_away=0" + "\n");
+
+    }    
+</script>
+
+<center>
+<button type="button" title="Mute Input" onclick="input_mute()"><img src="img/input_muted.png" width="45px" height="45px"></button>
+<button type="button" title="Unmute Input" onclick="input_unmute()"><img src="img/input_unmuted.png" width="45px" height="45px"></button>
+<button type="button" title="Mute Output" onclick="output_mute()"><img src="img/output_muted.png" width="45px" height="45px"></button>
+<button type="button" title="Unmute Output" onclick="output_unmute()"><img src="img/output_unmuted.png" width="45px" height="45px"></button>
+<button type="button" title="Away" onclick="away()"><img src="img/away.png" width="45px" height="45px"></button>
+<button type="button" title="Not away" onclick="not_away()"><img src="img/away.png" width="45px" height="45px"></button>
+
+</center>
